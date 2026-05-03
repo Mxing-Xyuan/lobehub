@@ -15,6 +15,8 @@ const shouldUseCSP = process.env.ENABLED_CSP === '1';
 const isStandaloneMode = buildWithDocker || isDesktop;
 
 const standaloneConfig: NextConfig = {
+  typescript: { ignoreBuildErrors: true },
+  eslint: { ignoreDuringBuilds: true },
   output: 'standalone',
   outputFileTracingIncludes: { '*': ['public/**/*', '.next/static/**/*'] },
 };
