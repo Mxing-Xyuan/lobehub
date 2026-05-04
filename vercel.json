@@ -1,3 +1,4 @@
 {
+  "installCommand": "bun install --no-frozen-lockfile",
   "buildCommand": "bunx tsx scripts/prebuild.mts && next build"
 }
